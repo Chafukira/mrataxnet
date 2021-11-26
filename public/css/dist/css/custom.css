@@ -1,0 +1,11 @@
+/*
+ *   Customizing the adminLTE
+ */
+
+ .small-box>.inner {
+    background-color: #c8ac0e;
+    color:#0b381b ;}
+.invalidFeedback {
+    color: #ff0000;
+    display: block;
+}
