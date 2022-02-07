@@ -75,9 +75,46 @@
                   </thead>
                   <tbody>
 
-                  <tr>
-                  <td>
-                  </tr>
+                    <?php
+                     foreach($data as $key =>$vaule){
+
+                      $result['data'][$key] = array(
+                          $vaule['TPIN'],
+                          $vaule['BusinessCertificateNumber'],
+                          $vaule['TradingName'],
+                          $vaule['BusinessRegistrationDate'],
+                          $vaule['MobileNumber'],
+                          $vaule['Email'],
+                          $vaule['PhysicalLocation'],
+                          $vaule['Username'],
+                          $vaule['Deleted'],
+                          $vaule['id']
+                      );
+                  }
+                  foreach($result as $jessey){
+                    foreach($jessey as $containner=>$x){
+                        foreach($x as $index=>$print){
+                    
+                        }
+                    }
+                    $display[] = $jessey;
+                }
+        
+               
+                foreach($display as $key){
+                    foreach($key as $value){
+                      echo"<tr>";
+                        foreach($value as $index){
+                          echo"<td>";
+                            echo $index;
+                          echo"</td>";  
+                        }
+                     echo"</tr>";   
+                    }
+                     
+                }
+                    ?>
+
            
             
 

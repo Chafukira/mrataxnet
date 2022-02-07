@@ -158,44 +158,50 @@ class Taxpayers extends Controller {
         $result = array('data'=>array());
         $data = $this->userModel->getAll();
 
-        foreach($data as $key =>$vaule){
+        //print_r($data);
 
-            $result['data'][$key] = array(
-                $vaule['TPIN'],
-                $vaule['BusinessCertificateNumber'],
-                $vaule['TradingName'],
-                $vaule['BusinessRegistrationDate'],
-                $vaule['MobileNumber'],
-                $vaule['Email'],
-                $vaule['PhysicalLocation'],
-                $vaule['Username'],
-                $vaule['Deleted'],
-                $vaule['id']
-            );
-        }
-        $boon = json_encode($result);
+        $this->view('pages/getAll',$data);
+
+        // foreach($data as $key =>$vaule){
+
+        //     $result['data'][$key] = array(
+        //         $vaule['TPIN'],
+        //         $vaule['BusinessCertificateNumber'],
+        //         $vaule['TradingName'],
+        //         $vaule['BusinessRegistrationDate'],
+        //         $vaule['MobileNumber'],
+        //         $vaule['Email'],
+        //         $vaule['PhysicalLocation'],
+        //         $vaule['Username'],
+        //         $vaule['Deleted'],
+        //         $vaule['id']
+        //     );
+        // }
+        //$boon = json_encode($result);
         //$allan = json_decode($boon);
-        echo'<br>';
-        echo'<br>';
+        //echo'<br>';
+        //echo'<br>';
 
-        foreach($result as $jessey){
-            foreach($jessey as $containner=>$x){
-                foreach($x as $index=>$print){
-                    //echo $print; echo'     ';
-                }
-            }
-            $display[] = $jessey;
-        }
+        //$this->view('pages/getAll',$result);
+
+        // foreach($result as $jessey){
+        //     foreach($jessey as $containner=>$x){
+        //         foreach($x as $index=>$print){
+        //             //echo $print; echo'     ';
+        //         }
+        //     }
+        //     $display[] = $jessey;
+        // }
 
 
-        foreach($display as $key){
-            foreach($key as $value){
-                foreach($value as $index){
-                    echo $index; echo '                  ';
-                }
-                echo'<br><br>';
-            }
-        }
+        // foreach($display as $key){
+        //     foreach($key as $value){
+        //         foreach($value as $index){
+        //             echo $index; echo '                  ';
+        //         }
+        //         echo'<br><br>';
+        //     }
+        // }
        
     }
 
